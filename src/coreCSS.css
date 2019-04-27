@@ -1,0 +1,61 @@
+h1{
+  font-size: 100px;
+  font-family: verdana;
+  text-align: center;
+  padding:  0px;
+  color: #6d0808;
+}
+h2{
+  font-family: verdana;
+  text-align: center;
+  padding:  0px;
+  color: #6d0808;
+}
+p1{
+  font-family: verdana;
+  color: white;
+  font-size: 20px;
+}
+p2{
+  font-family: verdana;
+  color: white;
+  font-size: 15px;
+}
+p3{
+  font-family: verdana;
+  color: white;
+  font-size: 32px;
+}
+.b1:link, .b1:visited{
+  font-size: 20px;
+  font-family: verdana;
+  color: white;
+  background-color: #6d0808;
+  text-align: center;
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
+}
+.navBar{
+  margin: auto;
+  border: 5px solid #6d0808;
+  width: auto;
+  padding:  5px;
+  text-align: center;
+}
+.trending{
+  text-align: center;
+  border: 5px solid #6d0808;
+  width: auto;
+  padding:  5px 5px;
+  text-align: center;
+  overflow: auto;
+}
+.story{
+  margin: auto;
+  border: 5px solid #6d0808;
+  width: auto;
+  padding:  10px;
+  text-align: center;
+  background-color: #6d0808;
+}
