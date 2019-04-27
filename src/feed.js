@@ -10,8 +10,6 @@ function feed(){
 	return sortFeed(postList);
 }
 
-
-
 function getPosts(){
 	var posts = [];
 }
