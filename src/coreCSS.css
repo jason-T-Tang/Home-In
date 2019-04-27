@@ -27,7 +27,7 @@ p3{
   color: white;
   font-size: 32px;
 }
-.fieldStyles{
+.labelStyles{
   font-family: verdana;
   color: #76323F;
   font-size: 20px;
@@ -36,8 +36,7 @@ p3{
   font-size: 20px;
   font-family: verdana;
   color: white;
-  background-color: #C09F80
-  ;
+  background-color: #C09F80;
   text-align: center;
   padding: 10px 20px;
   display: inline-block;
@@ -50,7 +49,24 @@ p3{
   width: auto;
   padding:  5px;
   text-align: center;
+  border-radius: 10px;
+}
+.betterFields{
+  border-radius: 7px;
+  border: 1px solid #76323F;
+  padding: 5px;
+}
+.registerStyles{
+  font-size: 20px;
+  font-family: verdana;
+  color: white;
+  background-color: #C09F80;
+  text-align: center;
+  padding: 10px 20px;
+  display: inline-block;
+  text-decoration: none;
   border-radius: 5px;
+  border: 0px;
 }
 .trending{
   text-align: center;
@@ -59,7 +75,14 @@ p3{
   padding:  5px 5px;
   text-align: center;
   overflow: auto;
-  border-radius: 5px;
+  border-radius: 10px;
+}
+.buttonStyles{
+  border: 5px 5px;
+  padding: 5px 5px;
+  color: #76323F;
+  border-radius; 15px;
+
 }
 .story{
   margin: auto;
@@ -68,5 +91,5 @@ p3{
   padding:  10px;
   text-align: center;
   background-color: #565656;
-  border-radius: 5px;
+  border-radius: 10px;
 }
