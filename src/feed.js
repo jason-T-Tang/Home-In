@@ -13,3 +13,7 @@ function feed(){
 function getPosts(){
 	var posts = [];
 }
+
+function makePost(name, author, content, tag) {
+	posts[posts.length] = {"name": name,"contents":content,"rating":0,"author":author,"tag":tag};
+}
