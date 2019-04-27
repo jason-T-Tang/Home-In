@@ -3,13 +3,14 @@ h1{
   font-family: verdana;
   text-align: center;
   padding:  0px;
-  color: #6d0808;
+  color: #76323F;
+
 }
 h2{
   font-family: verdana;
   text-align: center;
   padding:  0px;
-  color: #6d0808;
+  color: #76323F;
 }
 p1{
   font-family: verdana;
@@ -26,36 +27,46 @@ p3{
   color: white;
   font-size: 32px;
 }
+.fieldStyles{
+  font-family: verdana;
+  color: #76323F;
+  font-size: 20px;
+}
 .b1:link, .b1:visited{
   font-size: 20px;
   font-family: verdana;
   color: white;
-  background-color: #6d0808;
+  background-color: #C09F80
+  ;
   text-align: center;
   padding: 10px 20px;
   display: inline-block;
   text-decoration: none;
+  border-radius: 5px;
 }
 .navBar{
   margin: auto;
-  border: 5px solid #6d0808;
+  border: 5px solid #76323F;
   width: auto;
   padding:  5px;
   text-align: center;
+  border-radius: 5px;
 }
 .trending{
   text-align: center;
-  border: 5px solid #6d0808;
+  border: 5px solid #76323F;
   width: auto;
   padding:  5px 5px;
   text-align: center;
   overflow: auto;
+  border-radius: 5px;
 }
 .story{
   margin: auto;
-  border: 5px solid #6d0808;
+  border: 5px solid #565656;
   width: auto;
   padding:  10px;
   text-align: center;
-  background-color: #6d0808;
+  background-color: #565656;
+  border-radius: 5px;
 }
