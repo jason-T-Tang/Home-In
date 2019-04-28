@@ -5,7 +5,14 @@
   <link rel = "stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-
+<script>
+  function select(tagline){
+    var v = document.getElementById("tagline");
+    if(v.style.display === "none") {
+      v.style.display =
+    }
+  }
+</script>
 <div class = "navBar">
   <a class = "b1" href = "homePage.html">Home</a>
   <a class = "b1" href = "trendingPage.html">Trending</a>
@@ -27,16 +34,15 @@
         <textarea name = "title" class = "betterFields" rows = "6" cols = 100></textarea><br>
         Write your post here:<br>
         <textarea name = "post"  class = "betterFields" rows = "50" cols = 100></textarea><br><br>
-        Current tags:<br><br>
-        Add tags:<br><br>
-        
 
-        <button class = "registerStyles">"General"</button>
-        <button class = "registerStyles">"Money"</button>
-        <button class = "registerStyles">"Shelter"</button>
-        <button class = "registerStyles">"Social"</button>
-        <button class = "registerStyles">"Survival"</button>
-        <button class = "registerStyles">"Education"</button>
+        Add tags:<br><br>
+
+        <input type = "checkbox" name = "general" value = "yes">"General"</button>
+        <input type = "checkbox" name = "money" value = "yes">"Money"</button>
+        <input type = "checkbox" name = "shelter" value = "yes">"Shelter"</button>
+        <input type = "checkbox" name = "social" value = "yes">"Social"</button>
+        <input type = "checkbox" name = "survival" value = "yes">"Survival"</button>
+        <input type = "checkbox" name = "education" value = "yes">"Education"</button>
 
         <br><br>
         <input type = "submit" class = "registerStyles" value = "Post!">
