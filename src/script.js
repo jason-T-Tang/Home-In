@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	let down2=true;
 	let posts= getPosts();
 	let sortedArray;
+	var pageType = document.getElementById('type');
+	let index = 0;
 	if(pageType.className === 'trending')
 	{
 		//alert(JSON.stringify(posts));
@@ -18,11 +20,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		//alert(pageType.className);
 		sortedArray = sortFeedTime(posts);
 	}
-	if(sortedArray != undefined)
-	{
-	var pageType = document.getElementById('type');
-	if(
-		let index = 0;
+	
+	if(sortedArray != undefined){
 		//var canvas = document.getElementById("myCanvas");
 		//var ctx = canvas.getContext("2d");
 	/*
@@ -120,8 +119,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		  down2=false;
 		}
 		);
+		
 	}
-
 }
 );
 
@@ -131,7 +130,7 @@ function sortFeedRate(postList){
 }
 
 function sortFeedTime(postList){
-	let posts = postList.sort(function(a, b){return b.time-a.time});
+	let posts = postList.sort(function(a, b){return b.time.getTime-a.time.getTime});
 	return posts;
 }
 
@@ -140,9 +139,9 @@ function sortFeedTime(postList){
 
 
 function getPosts(){
-	return [{"name":"Educational Resources","contents":"Five professors of San Jose State University have proposed a new tutoring program for low-income and homeless students.","rating":3,"author":"author???","tag":"meh","time": new Date('Sun Apr 26 2019 11:51:16 GMT-0700 (Pacific Daylight Time)'),},
-	{"name":"New Options for Food","contents":"Two new food banks have opened up near San Jose State University;  one in 7th Street an one in San Fernando Street.","rating":123,"author":"author???2","tag":"meh2","time":new Date('Sun Apr 26 2019 11:51:16 GMT-0700 (Pacific Daylight Time)'),,},
-	{"name":"Open Clinic","contents":"Clinic offers free healthcare to homeless in San Jose area","rating":700,"author":"author???2","tag":"meh2","time":2400,
+	return [{"name":"Educational Resources","contents":"Five professors of San Jose State University have proposed a new tutoring program for low-income and homeless students.","rating":3,"author":"author???","tag":"meh","time": new Date('Fri Apr 26 2019 11:51:16 GMT-0700 (Pacific Daylight Time)'),},
+	{"name":"New Options for Food","contents":"Two new food banks have opened up near San Jose State University;  one in 7th Street an one in San Fernando Street.","rating":123,"author":"author???2","tag":"meh2","time":new Date('Sat Apr 27 2019 7:51:16 GMT-0700 (Pacific Daylight Time)'),},
+	{"name":"Open Clinic","contents":"Clinic offers free healthcare to homeless in San Jose area","rating":700,"author":"author???2","tag":"meh2","time":new Date('Sat Apr 27 2019 11:51:16 GMT-0700 (Pacific Daylight Time)'),
 	}]
 }
 
