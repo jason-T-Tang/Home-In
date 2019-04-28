@@ -7,7 +7,7 @@ h1{
 }
 h2{
   font-family: verdana;
-  text-align: center;
+  text-align: left;
   padding:  0px;
   color: #76323F;
 }
@@ -68,11 +68,18 @@ p3{
   border: 0px;
 }
 .trending{
-  text-align: center;
+  text-align: left;
   border: 5px solid #76323F;
   width: auto;
   padding:  5px 5px;
-  text-align: center;
+  overflow: auto;
+  border-radius: 10px;
+}
+.newest{
+  text-align: left;
+  border: 5px solid #76323F;
+  width: auto;
+  padding:  5px 5px;
   overflow: auto;
   border-radius: 10px;
 }
