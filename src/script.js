@@ -149,7 +149,7 @@ function sortFeedTime(postList){
 function createPost(){
 	let name=document.getElementById("titleText").value;
 	let contents=document.getElementById("contentText").value;
-	console.log({"name":name,"contents":contents,"rating":0,"author":getUsername(),"tag":getTags(),"time":getServerTime()});
+	return {"name":name,"contents":contents,"rating":0,"author":getUsername(),"tag":getTags(),"time":getServerTime()};
 }
 
 function getServerTime(){
@@ -165,7 +165,6 @@ function getTags(){
 
 		if(button.checked===true){
 			array.push(button.name);
-			console.log(button.name);
 	}
 }
 return array;
