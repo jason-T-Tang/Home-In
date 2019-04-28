@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		//document.getElementsByTagName('body')[0].appendChild(canvas);
 		document.body.appendChild(canvas)*/
 	for(let i=0;i<2;i=i+1){
-		alert(JSON.stringify(sortedArray[i]));
+		//alert(JSON.stringify(sortedArray[i]));
 		document.getElementById("name" + (i+1)).innerHTML = sortedArray[i].name + '<br />';
 		document.getElementById("content" + (i+1)).innerHTML = sortedArray[i].contents + '<br />';
 		document.getElementById("rating" + (i+1)).innerHTML = sortedArray[i].rating;
