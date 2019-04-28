@@ -2,17 +2,22 @@
 	//on startup
 	var tagAmount=6; //hardcoded amount of tags
 document.addEventListener('DOMContentLoaded', function () {
-	
+
+	//uses pageType to select which version of script to run
+	//todo split into seperate script files
+	var pageType = document.getElementById('type');	
+
 	//for postpAGE
 	//runs the createPost
 	//todo get createpost to update posts in server memory
+	if(pageType==null){
 	document.getElementById("submitNewPost").addEventListener("click", function(){
 	let newPost=createPost();
 	console.log(newPost);
 	pushPost(newPost);
 	}
 	);
-	
+	}
 	
 	//values for upvote and downvote logic
 	let up1=true; 
@@ -24,9 +29,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	let sortedArray;
 	let posts=getPosts();
 	
-	//uses pageType to select which version of script to run
-	//todo split into seperate script files
-	var pageType = document.getElementById('type');
 	
 	//if the pageType exists
 	// only trending and newst have a type element
@@ -121,8 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				let variable=(parseInt((document.getElementById("rating2")).innerHTML)-1).toString();
 			  document.getElementById("rating2").innerHTML =variable;
 			  sortedArray[index - 1].rating--;
-			  alert(sortedArray[index - 1].rating--);
-
+			  
 			}
 
 			  else if(down2&&!up2){
