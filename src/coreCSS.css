@@ -4,7 +4,6 @@ h1{
   text-align: center;
   padding:  0px;
   color: #76323F;
-
 }
 h2{
   font-family: verdana;
@@ -80,16 +79,16 @@ p3{
 .buttonStyles{
   border: 5px 5px;
   padding: 5px 5px;
-  color: #76323F;
+  color: #C09F80;
   border-radius; 15px;
 
 }
 .story{
   margin: auto;
-  border: 5px solid #565656;
+  border: 5px solid #C09F80;
   width: auto;
   padding:  10px;
   text-align: center;
-  background-color: #565656;
+  background-color:#C09F80;
   border-radius: 10px;
 }
