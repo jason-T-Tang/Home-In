@@ -1,22 +1,18 @@
 'use strict'
-var tagAmount=6;
+	var posts= [{"name":"Educational Resources","contents":"Five professors of San Jose State University have proposed a new tutoring program for low-income and homeless students.","rating":3,"author":"author???","tag":"meh","time": new Date('Sat Apr 27 2019 7:51:16 GMT-0700 (Pacific Daylight Time)'),},
+	{"name":"New Options for Food","contents":"Two new food banks have opened up near San Jose State University;  one in 7th Street an one in San Fernando Street.","rating":123,"author":"author???2","tag":"meh2","time":new Date('Sat Apr 27 2019 11:51:16 GMT-0700 (Pacific Daylight Time)'),},
+	{"name":"Open Clinic","contents":"Clinic offers free healthcare to homeless in San Jose area","rating":700,"author":"author???2","tag":"meh2","time":new Date('Fri Apr 26 2019 11:51:16 GMT-0700 (Pacific Daylight Time)'),}];
+
 document.addEventListener('DOMContentLoaded', function () {
-	document.getElementById("submitNewPost").addEventListener("click", function(){
-	let newPost=createPost();
-	console.log(newPost);
-	pushPost(newPost);
-	}
-	);
-	
 	let up1=true;
 	let down1=true;
 	let up2=true;
 	let down2=true;
-	let posts= getPosts();
 	let sortedArray;
 	var pageType = document.getElementById('type');
 	if(pageType !== null)
-	{		let index = 0;
+	{
+		let index = 0;
 		if(pageType.className === 'trending')
 		{
 			//alert(JSON.stringify(posts));
@@ -71,12 +67,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			document.getElementById("upvote1").addEventListener("click", function(){if(up1&&down1){
 				let variable=(parseInt((document.getElementById("rating1")).innerHTML)+1).toString();
 			  document.getElementById("rating1").innerHTML =variable;
-			  sortedArray[index - 2]++;
+			  sortedArray[index - 2].rating++;
 			}
 			else if(up1&&!down1){
 			  let variable=(parseInt((document.getElementById("rating1")).innerHTML)+2).toString();
 			  document.getElementById("rating1").innerHTML =variable;
-			  sortedArray[index - 2] += 2;
+			  sortedArray[index - 2].rating += 2;
 			  down1=true;
 			}
 			  up1=false;
@@ -85,12 +81,12 @@ document.addEventListener('DOMContentLoaded', function () {
 			document.getElementById("upvote2").addEventListener("click", function(){if(up2&&down2){
 				let variable=(parseInt((document.getElementById("rating2")).innerHTML)+1).toString();
 			  document.getElementById("rating2").innerHTML =variable;
-			  sortedArray[index - 1]++;
+			  sortedArray[index - 1].rating++;
 			}
 			  else if(up2&&!down2){
 			  let variable=(parseInt((document.getElementById("rating2")).innerHTML)+2).toString();
 			  document.getElementById("rating2").innerHTML =variable;
-			  sortedArray[index - 1] += 2;
+			  sortedArray[index - 1].rating += 2;
 			  down2=true;
 			}
 			  up2=false;
@@ -100,13 +96,13 @@ document.addEventListener('DOMContentLoaded', function () {
 			document.getElementById("downvote1").addEventListener("click", function(){if(down1&&up1){
 				let variable=(parseInt((document.getElementById("rating1")).innerHTML)-1).toString();
 			  document.getElementById("rating1").innerHTML =variable;
-			  sortedArray[index - 2]--;
+			  sortedArray[index - 2].rating--;
 			  up1=true;
 			}
 			  else if(down1&&!up1){
 			  let variable=(parseInt((document.getElementById("rating1")).innerHTML)-2).toString();
 			  document.getElementById("rating1").innerHTML =variable;
-			  sortedArray[index - 2] -= 2;
+			  sortedArray[index - 2].rating -= 2;
 			  up1=true;
 			}
 			down1=false;
@@ -115,14 +111,15 @@ document.addEventListener('DOMContentLoaded', function () {
 			document.getElementById("downvote2").addEventListener("click", function(){if(down2&&up2){
 				let variable=(parseInt((document.getElementById("rating2")).innerHTML)-1).toString();
 			  document.getElementById("rating2").innerHTML =variable;
-			  sortedArray[index - 1]--;
+			  sortedArray[index - 1].rating--;
+			  alert(sortedArray[index - 1].rating--);
 
 			}
 
 			  else if(down2&&!up2){
 			  let variable=(parseInt((document.getElementById("rating2")).innerHTML)-2).toString();
 			  document.getElementById("rating2").innerHTML =variable;
-			  sortedArray[index - 1] -= 2;
+			  sortedArray[index - 1].rating -= 2;
 			  up2=true;
 			}
 			  down2=false;
@@ -145,40 +142,12 @@ function sortFeedTime(postList){
 }
 
 
-
-function createPost(){
-	let name=document.getElementById("titleText").value;
-	let contents=document.getElementById("contentText").value;
-	return {"name":name,"contents":contents,"rating":0,"author":getUsername(),"tag":getTags(),"time":getServerTime()};
-}
-
-function getServerTime(){
-	return "time";
-}
-function getUsername(){
-	return "User";
-}
-function getTags(){
-	let array=[];
-	for(let i=0;i<tagAmount;i++){
-		var button=document.getElementById("tag"+i);
-
-		if(button.checked===true){
-			array.push(button.name);
-	}
-}
-return array;
-}
 function getPosts(){
-
-	return [{"name":"Educational Resources","contents":"Five professors of San Jose State University have proposed a new tutoring program for low-income and homeless students.","rating":3,"author":"author???","tag":"meh","time": new Date('Sat Apr 27 2019 11:51:16 GMT-0700 (Pacific Daylight Time)'),},
-	{"name":"New Options for Food","contents":"Two new food banks have opened up near San Jose State University;  one in 7th Street an one in San Fernando Street.","rating":123,"author":"author???2","tag":"meh2","time":new Date('Sat Apr 27 2019 7:51:16 GMT-0700 (Pacific Daylight Time)'),},
+	return [{"name":"Educational Resources","contents":"Five professors of San Jose State University have proposed a new tutoring program for low-income and homeless students.","rating":3,"author":"author???","tag":"meh","time": new Date('Sat Apr 27 2019 7:51:16 GMT-0700 (Pacific Daylight Time)'),},
+	{"name":"New Options for Food","contents":"Two new food banks have opened up near San Jose State University;  one in 7th Street an one in San Fernando Street.","rating":123,"author":"author???2","tag":"meh2","time":new Date('Sat Apr 27 2019 11:51:16 GMT-0700 (Pacific Daylight Time)'),},
 	{"name":"Open Clinic","contents":"Clinic offers free healthcare to homeless in San Jose area","rating":700,"author":"author???2","tag":"meh2","time":new Date('Fri Apr 26 2019 11:51:16 GMT-0700 (Pacific Daylight Time)'),
 	}]
 }
 
-function pushPost(post){
-	
-}
 
 
