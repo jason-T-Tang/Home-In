@@ -178,7 +178,7 @@ function getPosts(){
 }
 
 function pushPost(post){
-	
+	alert(JSON.stringify(post));
 }
 
 
