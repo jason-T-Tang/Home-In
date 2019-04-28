@@ -1,6 +1,14 @@
 'use strict'
-
+var tagAmount=6;
 document.addEventListener('DOMContentLoaded', function () {
+	
+	document.getElementById("submitNewPost").addEventListener("click", function(){
+	let newPost=createPost();
+	console.log(newPost);
+	pushPost(newPost);
+	}
+	);
+	/*
 	let down1=true;
 	let up1=true;
 	let up2=true;
@@ -59,7 +67,7 @@ document.getElementById("downvote2").addEventListener("click", function(){if(dow
 );
 
 
-
+*/
 }
 );
 
@@ -74,11 +82,36 @@ function feed(){
 	return sortFeed(postList);
 }
 
+function createPost(){
+	let name=document.getElementById("titleText").value;
+	let contents=document.getElementById("contentText").value;
+	console.log({"name":name,"contents":contents,"rating":0,"author":getUsername(),"tag":getTags(),"time":getServerTime()});
+}
 
+function getServerTime(){
+	return "time";
+}
+function getUsername(){
+	return "User";
+}
+function getTags(){
+	let array=[];
+	for(let i=0;i<tagAmount;i++){
+		var button=document.getElementById("tag"+i);
 
+		if(button.checked===true){
+			array.push(button.name);
+			console.log(button.name);
+	}
+}
+return array;
+}
 function getPosts(){
 	return [{"name":"ay","contents":"aylmao","rating":3,"author":"author???","tag":"meh",},{"name":"ay2","contents":"aylmao2","rating":123,"author":"author???2","tag":"meh2",}]
 }
 
+function pushPost(post){
+	
+}
 
 
